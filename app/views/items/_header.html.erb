@@ -1,7 +1,7 @@
 <header>
   <div class="header">
     <div class="left-menu">
-      <%= link_to image_tag("up-clo_logo_ns.jpg", class:"logo"), "#" %>
+      <%= link_to image_tag("/images/up-clo_logo_ns.jpg", id: "public", class:"logo"), root_path %>
     </div>
     <div class="right-menu">
       <ul>
@@ -18,10 +18,19 @@
             <li><a href="#" class="menu-list">Pattern</a></li><br>
           </ul>
         </li>
-        <li><a href="#" class="header-menu"><i class="fas fa-user-plus">Sign Up</i></a></li>
-        <li><a href="#" class="header-menu"><i class="fas fa-sign-in-alt">Sign In</i></a></li>
-        <%#li><a href="#" class="header-menu"><i class="fas fa-tshirt">〇〇's closet</i></a></li%>
-        <%#li><a href="#" class="header-menu"><i class="fas fa-sign-out-alt">Sign Out</i></a></li%>
+        <% if user_signed_in? %>
+          <li><a href="#" class="header-menu"><i class="fas fa-tshirt"><%=current_user.nickname%>'s closet</i></a></li> 
+          <li><%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fas fa-sign-out-alt header-menu">Sign out</i>
+          <% end %></li>
+        <% else %>
+          <li><%= link_to new_user_registration_path do %>
+            <i class="fas fa-user-plus ">Sign Up</i>
+          <% end %></li>
+          <li><%= link_to user_session_path do %>
+            <i class="fas fa-sign-in-alt header-menu">Sign In</i>
+          <% end %></li>
+        <% end %>
       </ul>
     </div>
   </div>
