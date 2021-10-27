@@ -1,0 +1,141 @@
+/*トップのヘッダー*/
+.header {
+  background-color: black;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+} 
+
+/*左ヘッダー*/
+.left-menu {
+  display: block;
+  justify-content: left ;
+}
+.logo {
+  height: 50px;
+  margin: 3px 10px 0;
+}
+/*右のヘッダー*/
+.right-menu{
+	text-align: right;
+  padding-top: 15px;
+  font-size: 20px;
+  display: block;
+  justify-content: right;
+  margin-right: 30px;
+}
+.right-menu ul {
+  justify-content: right;
+}
+.right-menu li{
+	display: inline-block;
+	list-style-type: none;
+  padding: auto;
+  position: relative;
+}
+.right-menu li a{
+	color: #ffffff;
+  text-decoration: none;
+	padding: 0 20px;
+}
+.right-menu li:hover >ul {
+  display: block;
+  border-radius: 8px;
+}
+.right-menu li ul {
+  display: none;
+  position: absolute;
+  width: 160px;
+  background-color: black;
+  text-align: left;
+}
+.right-menu li ul li {
+  height: 30px;
+  margin: 10px auto;
+}
+.fas {
+	color: #ffffff;
+  font-size: 20px;
+  padding-right: 5px;
+  transition: 0.5s;
+}
+.header-menu:hover .fas{
+  font-size: 25px;
+  color: blueviolet;
+  transition: 0.5s;
+}
+.menu-list {
+  transition: 0.5s;
+}
+.menu-list:hover {
+  font-size: 25px;
+  color: blueviolet;
+  transition: 0.5s;
+}
+
+
+/*トップコンテンツ*/
+.top-contents{
+  width: 100vw;
+  height: 70vh;
+  background-image: url(clothes2.jpg);
+}
+.top-content {
+  width: 30vw;
+  height: 40vh;
+  float: left;
+  background-color: black;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 80px;
+  padding: 100px;
+  margin: 150px;
+  transition: 0.5s;
+}
+.top-content > a :hover {
+  font-size: 35px;
+  color: blueviolet;
+  transition: 0.5s;
+}
+
+/* メインコンテンツ */
+.main {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-heading {
+  background-color: black;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  padding: 0 10px;
+  margin-top: 20px;
+  border-radius: 8px
+}
+.contents{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.content{
+  background-color: aqua;
+  border: solid 1px blue;
+  width: 340px;
+  padding: 25px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sample-img{
+  height: 300px;
+  width: 300px;
+}
