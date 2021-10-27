@@ -1,15 +1,16 @@
-/* .sign-up-contents {
-  background-color: gray;
-}
-.field {
-  color: #ffffff;
-  background-color: black;
-}
-fieldset {
+/*fieldset {
   border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 } */
+.center-mesasage  {
+  padding-left: 150px;
+  margin: 20px auto;
+  font-weight: bolder;
+}
+.field {
+  font-size: 30px;
+}
 form input,
 form textarea {
   width: 100%;
@@ -17,42 +18,32 @@ form textarea {
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
-  font-family: "游ゴシック", "YuGothic";
+  font-size: 30px;
 }
-
 form input[type="submit"] {
-  background-color: #57C3E9;
+  width: 200px;
+  background-color: black;
   border-radius: 20px;
   color: #fff;
   border: 0;
   font-size: 18px;
+  padding-left: calc(200px/3);
 }
-
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: gray;
 }
-
 .container {
-  margin: 80px 0;
-  padding: 60px;
+  width: 700px;
+  margin: 80px auto;
+  padding: 100px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
   box-sizing: border-box;
+  font-size: 50px;
+  font-weight: bold;
+  
 }
-
-.container h3 {
-  margin: 0 0 20px;
-  text-align: center;
-  font-weight: normal;
-  font-size: 20px;
-  color: #666;
-}
-
 .comments {
   padding: 5px;
   margin-top: 15px;
-}
-
-.comments a {
-  color:#57C3E9 ;
 }
