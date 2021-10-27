@@ -75,7 +75,11 @@
   transition: 0.5s;
 }
 
-
+/* ボディ */
+.body {
+  display: grid; 
+  justify-content: center;
+}
 /*トップコンテンツ*/
 .top-contents{
   width: 100vw;
@@ -84,16 +88,19 @@
 }
 .top-content {
   width: 30vw;
-  height: 40vh;
+  height: calc(100vh - 60vh);
   float: left;
   background-color: black;
   color: #ffffff;
   font-size: 30px;
   font-weight: bold;
   border-radius: 80px;
-  padding: 100px;
   margin: 150px;
   transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .top-content > a :hover {
   font-size: 35px;
@@ -124,18 +131,34 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  overflow: hidden;
 }
 .content{
-  background-color: aqua;
-  border: solid 1px blue;
+  background-color: black;
+  border: solid 1px gray;
+  color: #ffffff;
   width: 340px;
+  height: 400px;
   padding: 25px;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: 0.5s;
+}
+.content:hover {
+  background-color: gray;
+  border: solid 1px black;
+  font-weight: bold;
+  font-size: 120%;
+  transition: 1s;
 }
 .sample-img{
   height: 300px;
   width: 300px;
+  transition: 0.5s;
+}
+.sample-img:hover{
+  transform: scale(1.1);
+  transition: 1s;
 }
