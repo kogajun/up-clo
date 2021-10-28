@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user
+  has_one_attached :image
   
   validates :user,        null: false, foreign_key: true
   validates :brand,       length: { maximum: 40 }
