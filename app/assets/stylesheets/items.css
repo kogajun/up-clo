@@ -162,6 +162,21 @@
   transform: scale(1.1);
   transition: 1s;
 }
+
+
+
+.item-img-content {
+  position: relative;
+}
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+
+
+
+
 /* エラーメッセージ */
 #error_explanation{
   color: red;
