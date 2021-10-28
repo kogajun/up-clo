@@ -1,0 +1,89 @@
+<%= render "items/header" %>
+<div class="contents row">
+  <div class="container">
+    <div class="center-mesasage" ><h3>New item</h3></div>
+    <%= form_with model: @item, class: 'new_item', local: true do |f| %>
+      <%# <%= render "error_messages", resource: resource %>
+      <%# アイテム画像 %>
+      <div class="click-upload">
+        アイテム<span class="indispensable">必須</span>
+          <p>クリックしてファイルをアップロード</p>
+          <%= f.file_field :image, id:"item-image" %>
+      </div>
+      <%# /アイテム画像 %>
+      <%# ブランド %>
+      <div class="new-item">
+          ブランド
+        <%= f.text_field :brand, class:"items-text", id:"item-size", placeholder:"ブランド" %>
+      </div>
+      <%# /ブランド %>
+      <%# アイテム名 %>
+      <div class="new-item">
+          アイテム名<span class="indispensable">必須</span>
+        <%= f.text_field :item_name, class:"items-text", id:"item-name", placeholder:"アイテム名（必須 20文字まで)", maxlength:"20" %>
+      </div>
+      <%# /アイテム名 %>
+
+   <%# アイテムの特徴プルダウンメニュー %>
+    <div class="items-detail">
+      <div class="">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+          form
+        </div>
+        <div class="weight-bold-text">
+          カラー
+          <span class="indispensable">必須</span>
+          form
+        </div>
+        <div class="weight-bold-text">
+          柄
+          <span class="indispensable">必須</span>
+          form
+        </div>
+        <div class="weight-bold-text">
+          季節
+          <span class="indispensable">必須</span>
+          form
+        </div>
+      </div>
+    </div>
+    <%# /アイテムの特徴プルダウンメニュー %>
+      <%# プライス %>
+      <div class="sell-price">
+          <span>プライス<br>(¥0〜9,999,999)</span>
+          <span class="indispensable">必須</span>
+          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+      </div>
+      <%# /プライス %>
+      <%# サイズ %>
+      <div class="new-item">
+          サイズ
+          <span class="indispensable">必須</span>
+        <%= f.text_field :size, class:"items-text", id:"item-size", placeholder:"サイズ" %>
+      </div>
+      <%# /サイズ %>
+      <%# シーン %>
+      <div class="new-item">
+          シーン
+        <%= f.text_area :scene, class:"items-text", id:"item-scene", placeholder:"シーン・オケージョン（20文字まで)" %>
+      </div>
+      <%# /シーン %>
+      <%# メモ %>
+      <div class="new-item">
+          メモ
+        <%= f.text_area :memo, class:"items-text", id:"item-memo", placeholder: "メモ（100文字まで)", rows: "7"%>
+      </div>
+      <%# /メモ %>
+      <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "Post" ,class:"post-btn" %><br>
+      <%=link_to 'Top page', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>
+
