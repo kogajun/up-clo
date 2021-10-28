@@ -148,6 +148,7 @@
 .content:hover {
   background-color: gray;
   border: solid 5px black;
+  color: black;
   font-size: 120%;
   transition: 1s;
 }
