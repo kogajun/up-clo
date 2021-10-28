@@ -1,8 +1,12 @@
 class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
+  belongs_to :color
+  belongs_to :pattern
+  belongs_to :season
   
-  validates :user,        null: false, foreign_key: true
   validates :brand,       length: { maximum: 40 }
   validates :item_name,   null: false, length: { maximum: 20 }
   validates :category_id, null: false, numericality: { other_than: 0, message: "can't be blank" }

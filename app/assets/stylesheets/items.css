@@ -1,5 +1,6 @@
 /*トップのヘッダー*/
 .header {
+  z-index: 1;
   background-color: black;
   position: fixed;
   display: flex;
@@ -159,18 +160,9 @@
   transition: 0.5s;
 }
 .sample-img:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 1s;
-}
-
-
-
-.item-img-content {
-  position: relative;
-}
-.item-img {
-  width: 33vh;
-  height: 33vh;
+  z-index: 0;
 }
 
 
@@ -187,6 +179,9 @@
 .new_item{
   font-size: 20px;
 }
+.sub-message {
+  font-size: 15px;
+}
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -200,8 +195,10 @@
   margin-top: 40px;
   min-width: 250px;
 }
-
-
+.item-info{
+  text-align: center;
+  padding-top: 10px;
+}
 .sell-btn-contents {
   text-align: center;
 }
@@ -221,4 +218,15 @@
   background-color: #ffffff;
   color: gray;
   border:solid 2px gray;
+}
+
+
+.selecter {
+  height: 45px;
+  width: 100%;
+  margin: 5px 0 15px;
+  padding-left: 30px;
+  border: solid 1px #D8D8D8;
+  border-radius: 5px;
+  font-size: 20px;
 }

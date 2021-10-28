@@ -22,21 +22,22 @@
   <div class="main">
     <h1 class="page-heading">ITEMS</h1>
     <% if user_signed_in? %>
-      <ul class='item-lists'>
         <% if @items.present? %>
           <% @items.each do |item| %>
-            <li class='list'>
-              <%= link_to item_path(item.id), method: :get  do %>
-                <div class='item-img-content'>
-                  <%= image_tag item.image, class: "item-img" %>
-                </div>
-              <% end %>
-            </li>
+            <div class='contents'>
+              <div class="content">
+                <%= link_to "#", method: :get  do %>
+                  <%= image_tag item.image, class: "sample-img" %><br>
+                  <p class="item-info" ><%= item.item_name %></p>
+                  <p class="item-info" ><%= item.category.name %></p>
+                <% end %>
+              </div>
+            </div>
           <% end %>
         <% else %>
           <div class="contents">
             <div class="content">
-              <%= image_tag "/images/image.png", class:"sample-img" %><br>
+              <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
               <p>Let's post !!</p>
             </div>
           </div>
@@ -55,26 +56,24 @@
     <h1 class="page-heading">STYLINGS</h1>
     <% if user_signed_in? %>
       <%# スタイリング投稿機能実装追記 %>
-      <ul class='item-lists'>
         <%# <% if @items.present? %>
           <%#<% @items.each do |item| %>
-            <%#<li class='list'>
+            <%#<div class='list'>
               <%#<%= link_to item_path(item.id), method: :get  do %>
                 <%#<div class='item-img-content'>
                   <%= image_tag item.image, class: "item-img" %>
                 <%#</div>
               <% end %>
-            <%#</li>
+            <%#</div>
           <%#<% end %>
         <%#<% else %> 
           <div class="contents">
             <div class="content">
-              <%= image_tag "/images/image.png", class:"sample-img" %><br>
+              <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
               <p>Let's post !!</p>
             </div>
           </div>
         <%#<% end %>
-      </ul>
     <% else %>
       <div class="contents">
         <% 5.times do %>
