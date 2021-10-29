@@ -1,6 +1,7 @@
 <%= render "header" %>
-<body>
- <div class="body">
+
+<header>
+ <div class="top">
     <div class="top-contents">
       <div class="top-content">
         <% if user_signed_in? %>
@@ -14,31 +15,74 @@
         <% end %>
       </div>
     </div>
-    <div class="main">
-      <h1 class="page-heading">ITEMS</h1>
-      <% if user_signed_in? %>
-      <% else %>
-        <div class="contents">
-          <% 5.times do %>
-          <div class="content">
-            <%= image_tag "/images/image.png", class:"sample-img" %><br>
-            <div>sample item</div>
-          </div>
+  </div>
+</header>
+
+<body>
+  <div class="main">
+    <h1 class="page-heading">ITEMS</h1>
+    <% if user_signed_in? %>
+        <% if @items.present? %>
+          <% @items.each do |item| %>
+            <div class='contents'>
+              <div class="content">
+                <%= link_to "#", method: :get  do %>
+                  <%= image_tag item.image, class: "sample-img" %><br>
+                  <p class="item-info" ><%= item.item_name %></p>
+                  <p class="item-info" ><%= item.category.name %></p>
+                <% end %>
+              </div>
+            </div>
           <% end %>
-        </div>
-      <% end %>
-      <h1 class="page-heading">STYLINGS</h1>
-      <% if user_signed_in? %>
-       <% else %>
-        <div class="contents">
-          <% 5.times do %>
-          <div class="content">
-            <div><%= image_tag '/images/image.png', class:"sample-img" %></div><br>
-            <div>sample styling</div>
+        <% else %>
+          <div class="contents">
+            <div class="content">
+              <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
+              <p>Let's post !!</p>
+            </div>
           </div>
-          <% end %>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="contents">
+        <% 5.times do %>
+        <div class="content">
+          <%= image_tag "/images/image.png", class:"sample-img" %><br>
+          <div>sample item</div>
         </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
+    <h1 class="page-heading">STYLINGS</h1>
+    <% if user_signed_in? %>
+      <%# スタイリング投稿機能実装追記 %>
+        <%# <% if @items.present? %>
+          <%#<% @items.each do |item| %>
+            <%#<div class='list'>
+              <%#<%= link_to item_path(item.id), method: :get  do %>
+                <%#<div class='item-img-content'>
+                  <%= image_tag item.image, class: "item-img" %>
+                <%#</div>
+              <% end %>
+            <%#</div>
+          <%#<% end %>
+        <%#<% else %> 
+          <div class="contents">
+            <div class="content">
+              <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
+              <p>Let's post !!</p>
+            </div>
+          </div>
+        <%#<% end %>
+    <% else %>
+      <div class="contents">
+        <% 5.times do %>
+        <div class="content">
+          <div><%= image_tag '/images/image.png', class:"sample-img" %></div><br>
+          <div>sample styling</div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </body>
