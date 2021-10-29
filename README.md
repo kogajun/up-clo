@@ -37,7 +37,7 @@ UP-CLO <br>
 
 # データベース設計　
 ER図等を添付。
-[![Image from Gyazo](https://i.gyazo.com/a334972afe140590a3a495aeb9e01ed9.png)](https://gyazo.com/a334972afe140590a3a495aeb9e01ed9)
+[![Image from Gyazo](https://i.gyazo.com/8c0d9a9e1971a1c7e5131622d424da83.png)](https://gyazo.com/8c0d9a9e1971a1c7e5131622d424da83)
 
 ## users table
 
@@ -58,13 +58,12 @@ ER図等を添付。
 |-----------------------|------------|--------------------------------|
 | user                  | references | null: false, foreign_key: true |
 | item_name             | string     | null: false                    |
-| brand                 | string     |                                |
 | category_id           | integer    | null: false                    |
 | color_id              | integer    | null: false                    |
 | pattern_id            | integer    | null: false                    |
 | season_id             | integer    | null: false                    |
+| brand                 | string     |                                |
 | price                 | integer    | null: false                    |
-| size                  | string     | null: false                    |
 | scene                 | string     |                                |
 | memo                  | text       |                                |
 
