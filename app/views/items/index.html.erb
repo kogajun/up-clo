@@ -7,7 +7,7 @@
         <% if user_signed_in? %>
           <p>検索箇所</p>
         <% else %>
-          <p>APPの説明文</p>
+          <p>あなたのクローゼット<br>アプリへようこそ！！</p>
           <br>
           <i class="fas fa-user-plus"><%= link_to "Sign Up", new_user_registration_path %></i>
           <br>
@@ -22,16 +22,15 @@
   <div class="main">
     <h1 class="page-heading">ITEMS</h1>
     <% if user_signed_in? %>
+      <div class="contents">
         <% if @items.present? %>
           <% @items.each do |item| %>
-            <div class='contents'>
-              <div class="content">
-                <%= link_to "#", method: :get  do %>
-                  <%= image_tag item.image, class: "sample-img" %><br>
-                  <p class="item-info" ><%= item.item_name %></p>
-                  <p class="item-info" ><%= item.category.name %></p>
-                <% end %>
-              </div>
+            <div class="content">
+              <%= link_to "#", method: :get  do %>
+                <%= image_tag item.image, class: "sample-img" %><br>
+                <p class="item-info" >Name : <%= item.item_name %></p>
+                <p class="item-info" >Category : <%= item.category.name %></p>
+              <% end %>
             </div>
           <% end %>
         <% else %>
@@ -42,7 +41,7 @@
             </div>
           </div>
         <% end %>
-      </ul>
+      </div>
     <% else %>
       <div class="contents">
         <% 5.times do %>
