@@ -146,6 +146,7 @@
   flex-wrap: wrap;
   justify-content: center;
   transition: 0.25s;
+  font-weight: bold;
 }
 .content:hover {
   background-color: gray;
