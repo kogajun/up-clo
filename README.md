@@ -1,9 +1,9 @@
 # README
 # アプリケーション名
-UP-CLO <br>
+* UP-CLO <br>
 (アプクロ)<br>
 [![Image from Gyazo](https://i.gyazo.com/998aa583c74c9c1a50f5d34fec3763e4.png)](https://gyazo.com/998aa583c74c9c1a50f5d34fec3763e4)
-ユーザーページ
+* ユーザーページ
 [![Image from Gyazo](https://i.gyazo.com/541a171afe2f5d3dc97c6995886d3fa3.jpg)](https://gyazo.com/541a171afe2f5d3dc97c6995886d3fa3)
 # アプリケーション概要
 クローゼットアプリケーション。<br>
