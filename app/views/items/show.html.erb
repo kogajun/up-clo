@@ -1,67 +1,90 @@
 <%= render "items/header" %>
 <body>
-<div class="contents row">
-  <div class="content_post">
-    <div class="container">
-      <div class="center-contents">
-        <div class="content-img">
-          <%= image_tag @item.image ,class:"sample-img-show" %>
-          <span>Name : <%= @item.item_name %></span>
+  <div class="contents row">
+    <div class="content_post">
+      <div class="container">
+        <div class="center-contents">
+          <div class="content-img">
+            <%= image_tag @item.image ,class:"sample-img-show" %>
+            <span>Name : <%= @item.item_name %></span>
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th class="detail-item">brand</th>
+                <td class="detail-value"><%= @item.brand %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">item_name</th>
+                <td class="detail-value"><%= @item.item_name %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">category</th>
+                <td class="detail-value"><%= @item.category.name %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">color</th>
+                <td class="detail-value"><%= @item.color.name %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">pattern</th>
+                <td class="detail-value"><%= @item.pattern.name %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">season</th>
+                <td class="detail-value"><%= @item.season.name %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">price</th>
+                <td class="detail-value">¥<%= @item.price %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">size</th>
+                <td class="detail-value"><%= @item.size %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">scene</th>
+                <td class="detail-value"><%= @item.scene %></td>
+              </tr>
+              <tr>
+                <th class="detail-item">memo</th>
+                <td class="detail-value"><%= @item.memo %></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th class="detail-item">brand</th>
-              <td class="detail-value"><%= @item.brand %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">item_name</th>
-              <td class="detail-value"><%= @item.item_name %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">category</th>
-              <td class="detail-value"><%= @item.category.name %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">color</th>
-              <td class="detail-value"><%= @item.color.name %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">pattern</th>
-              <td class="detail-value"><%= @item.pattern.name %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">season</th>
-              <td class="detail-value"><%= @item.season.name %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">price</th>
-              <td class="detail-value">¥<%= @item.price %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">size</th>
-              <td class="detail-value"><%= @item.size %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">scene</th>
-              <td class="detail-value"><%= @item.scene %></td>
-            </tr>
-            <tr>
-              <th class="detail-item">memo</th>
-              <td class="detail-value"><%= @item.memo %></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="btns">
-        <div class="edit-btn btn">
-          <%= link_to '編集', edit_item_path(@item.id), method: :get %>
-        </div>
-        <div class="delete-btn btn">
-          <%= link_to '削除', item_path(@item.id), method: :delete %>
+        <div class="btns">
+          <div class="edit-btn btn">
+            <%= link_to '編集', edit_item_path(@item.id), method: :get %>
+          </div>
+          <div class="delete-btn btn">
+            <%= link_to '削除', item_path(@item.id), method: :delete %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="main">
+    <%#   <Stylings実装後変更> %>
+    <h1 class="page-heading">STYLINGS</h1>
+    <%# スタイリング投稿機能実装追記 %>
+    <%# <% if @items.present? %>
+      <%#<% @items.each do |item| %>
+        <%#<div class='list'>
+          <%#<%= link_to item_path(item.id), method: :get  do %>
+            <%#<div class='item-img-content'>
+              <%= image_tag item.image, class: "item-img" %>
+            <%#</div>
+          <% end %>
+        <%#</div>
+      <%#<% end %>
+    <%#<% else %> 
+      <div class="contents">
+        <div class="content">
+          <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
+          <p>Let's post !!</p>
+        </div>
+      </div>
+    <%#<% end %>
+  </div>
 </body>
