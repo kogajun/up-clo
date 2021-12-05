@@ -26,7 +26,7 @@
         <% if @items.present? %>
           <% @items.each do |item| %>
             <div class="content">
-              <%= link_to "#", method: :get  do %>
+              <%= link_to item_path(item.id), method: :get  do %>
                 <%= image_tag item.image, class: "sample-img" %><br>
                 <p class="item-info" >Name : <%= item.item_name %></p>
                 <p class="item-info" >Category : <%= item.category.name %></p>
