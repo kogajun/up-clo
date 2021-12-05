@@ -272,6 +272,15 @@
   font-size: 20px;
   border: 3px solid black;
 }
+.detail-item {
+  background-color: lightgray;
+  margin: auto;
+  padding: 5px;
+}
+.detail-value{
+  margin: auto;
+  padding: 5px;
+}
 .btn {
   width: 200px;
   font-size: 30px;
