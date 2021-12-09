@@ -1,12 +1,13 @@
 <%= render "items/header" %>
 <div class="contents row">
   <div class="container">
-    <div class="center-mesasage" ><h3>New item</h3></div>
+    <div class="center-mesasage" ><h3>Edit item</h3></div>
     <%= form_with model: @item, class: 'new_item', local: true do |f| %>
       <%= render "error_messages", model: f.object %>
       <%# アイテム画像 %>
         アイテム<span class="indispensable">必須</span>
-        <p class="sub-message">クリックして写真をアップロード</p>
+        <p class="sub-message">クリックして写真をアップロード<br>
+        写真を変更したい場合のみアップロードしてください。<br></p>
         <%= f.file_field :image, id:"item-image" %><br>
       <%# /アイテム画像 %>
       <%# ブランド %>
@@ -67,11 +68,10 @@
       <%# /メモ %>
       <%# 下部ボタン %>
     <div class="btn-contents">
-      <%= f.submit "Post" ,class:"post-btn" %><br>
+      <%= f.submit "Update" ,class:"post-btn" %><br>
       <%=link_to 'Top page', root_path, class:"btn-design" %>
     </div>
     <%# /下部ボタン %>
     <% end %>
   </div>
 </div>
-
