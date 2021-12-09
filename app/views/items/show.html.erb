@@ -54,11 +54,11 @@
           </table>
         </div>
         <div class="btns">
-          <div class="edit-btn btn">
-            <%= link_to '編集', edit_item_path(@item.id), method: :get %>
+          <div class="btn-design">
+            <%= link_to 'Edit', edit_item_path(@item.id), method: :get %>
           </div>
-          <div class="delete-btn btn">
-            <%= link_to '削除', item_path(@item.id), method: :delete %>
+          <div class="btn-design">
+            <%= link_to 'Delete', item_path(@item.id), method: :delete %>
           </div>
         </div>
       </div>
