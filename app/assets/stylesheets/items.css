@@ -199,19 +199,19 @@
 .btn-contents {
   text-align: center;
 }
-.back-btn{
+.btn-design{
   width: 200px;
   background: #aaa;
   border: 1px solid #aaa;
   border-radius: 20px;
   text-decoration: none;
   color: #fff;
-  border: 0;
+  border: solid 2px #ffffff;
   font-size: 18px;
   text-align: center; 
   padding: 10px 60px;
 }
-.back-btn:hover {
+.btn-design:hover {
   background-color: #ffffff;
   color: gray;
   border:solid 2px gray;
@@ -299,4 +299,11 @@
   background-color: #ffffff;
   color: gray;
   border: solid 3px gray;
+}
+
+/* 編集・投稿ページ */
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -6,8 +6,9 @@
 
 .row {
   width: 100%;
+  height: 100%;
   background-color:#D8D8D8;
-  padding-bottom: 10%;
+  padding-top: 60px;
 }
 .center-mesasage  {
   text-align: center;
