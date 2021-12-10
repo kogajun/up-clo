@@ -21,7 +21,7 @@
           </ul>
         </li>
         <% if user_signed_in? %>
-          <li><a href="#" class="header-menu"><i class="fas fa-tshirt"><%=current_user.nickname%>'s closet</i></a></li> 
+          <li><a href="/" class="header-menu"><i class="fas fa-tshirt"><%=current_user.nickname%>'s closet</i></a></li> 
           <li><%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fas fa-sign-out-alt header-menu">Sign out</i>
           <% end %></li>
