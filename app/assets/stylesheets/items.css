@@ -88,8 +88,8 @@
   background-image: url(/images/clothes1.png);
 }
 .top-content {
-  width: 500px;
-  height: 350px;
+  width: calc(100VW/3);
+  height: calc(70vh - 300px);
   float: left;
   background-color: black;
   color: #ffffff;

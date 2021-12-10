@@ -6,7 +6,6 @@
           <%= link_to item_path(@item.id), method: :get  do %>
             <%= image_tag @item.image, class: "sample-img-show" %><br>
             <p class="item-info" >Name : <%= @item.item_name %></p>
-            <p class="item-info" >Category : <%= @item.category.name %></p>
           <% end %>
         </div>
       </div>

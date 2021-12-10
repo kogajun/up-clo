@@ -5,8 +5,8 @@
     <%= form_with model: @item, class: 'new_item', local: true do |f| %>
       <%= render "error_messages", model: f.object %>
       <%# アイテム画像 %>
-        アイテム<span class="indispensable">必須</span>
-        <p class="sub-message">クリックして写真をアップロード<br>
+        アイテム
+        <p class="sub-message"><span class="indispensable">注意</span>
         写真を変更したい場合のみアップロードしてください。<br></p>
         <%= f.file_field :image, id:"item-image" %><br>
       <%# /アイテム画像 %>
