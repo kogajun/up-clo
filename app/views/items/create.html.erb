@@ -2,17 +2,20 @@
  <div class="contents row">
    <div class="container">
       <div class="center-contents">
+        <div class="center-mesasage" >
+          <h3>投稿完了</h3>
+        </div>
         <div class="content-img">
           <%= link_to item_path(@item.id), method: :get  do %>
             <%= image_tag @item.image, class: "sample-img-show" %><br>
             <p class="item-info" >Name : <%= @item.item_name %></p>
+            <p class="item-info" >Category : <%= @item.category.name %></p>
           <% end %>
         </div>
-      </div>
-    <div class="center-mesasage" >
-      <h3>投稿完了</h3>
-      <div class="btn-contents">
-        <%=link_to 'Top page', root_path, class:"btn-design" %>
+      <div class="center-mesasage" >
+        <div class="btn-contents">
+          <%=link_to 'Top page', root_path, class:"btn-design" %>
+        </div>
       </div>
     </div>
   </div>
