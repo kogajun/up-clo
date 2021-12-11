@@ -53,6 +53,8 @@
       </div>
     <% end %>
     <br><%= paginate @items %>
+    <br><div class="page">ページ:<%= @items.current_page %> / <%= @items.total_pages %><br>
+    <%= @items.total_count %>件中<%= @items.offset_value + 1 %>〜<%= @items.offset_value + @items.length %>件を表示しています。</div><br>
     <h1 class="page-heading">STYLINGS</h1>
     <% if user_signed_in? %>
       <%# スタイリング投稿機能実装追記 %>

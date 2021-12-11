@@ -166,6 +166,11 @@
   z-index: 0;
 }
 
+.page {
+  font-weight: bold;
+  color: purple;
+}
+
 /* エラーメッセージ */
 #error_explanation{
   color: red;
