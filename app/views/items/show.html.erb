@@ -58,7 +58,7 @@
             <%= link_to 'Edit', edit_item_path(@item.id), method: :get %>
           </div>
           <div class="btn-design">
-            <%= link_to 'Delete', item_path(@item.id), method: :delete %>
+            <%= link_to 'Delete', item_path(@item.id), method: :delete, data: { confirm: '削除してよろしいですか？' } %>
           </div>
         </div>
       </div>

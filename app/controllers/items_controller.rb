@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   PER_PAGE = 5
 
   def index
-    @items = Item.all
+    @items = Item.all.includes(:user)
     @items = Item.page(params[:page]).order('created_at DESC').per(PER_PAGE)
   end
 
@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find(params[:id])
     item.destroy
+    redirect_to root_path
   end
 
   def edit
