@@ -23,7 +23,7 @@
     <h1 class="page-heading">ITEMS</h1>
     <% if user_signed_in? %>
       <div class="contents">
-        <% if current_user.items.present? %>
+        <% if @items.present? %>
           <% @items.each do |item| %>
             <div class="content">
               <%= link_to item_path(item.id), method: :get  do %>
@@ -52,7 +52,7 @@
         <% end %>
       </div>
     <% end %>
-    <% if current_user.items.present? %>
+    <% if @items.present? %>
       <br><%= paginate @items %>
       <br><div class="page">ページ:<%= @items.current_page %> / <%= @items.total_pages %><br>
       <%= @items.total_count %>件中<%= @items.offset_value + 1 %>〜<%= @items.offset_value + @items.length %>件を表示しています。</div><br>
