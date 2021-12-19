@@ -53,14 +53,16 @@
             </tbody>
           </table>
         </div>
-        <div class="btns">
-          <div class="btn-design">
-            <%= link_to 'Edit', edit_item_path(@item.id), method: :get %>
+        <% if current_user.id == @item.user_id %>
+          <div class="btns">
+            <div class="btn-design">
+              <%= link_to 'Edit', edit_item_path(@item.id), method: :get %>
+            </div>
+            <div class="btn-design">
+              <%= link_to 'Delete', item_path(@item.id), method: :delete, data: { confirm: '削除してよろしいですか？' } %>
+            </div>
           </div>
-          <div class="btn-design">
-            <%= link_to 'Delete', item_path(@item.id), method: :delete, data: { confirm: '削除してよろしいですか？' } %>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>

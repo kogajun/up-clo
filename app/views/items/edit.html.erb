@@ -69,7 +69,7 @@
       <%# 下部ボタン %>
     <div class="btn-contents">
       <%= f.submit "Update" ,class:"post-btn" %><br>
-      <%=link_to 'Top page', root_path, class:"btn-design" %>
+      <%=link_to 'Top page', user_path(current_user.id), class:"btn-design" %>
     </div>
     <%# /下部ボタン %>
     <% end %>

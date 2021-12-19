@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
   before_action :move_to_index, except: [:index]
-  before_action :set_item, only: [:edit, :show]
+  before_action :set_item, only: [:indix, :edit, :show]
 
-  PER_PAGE = 5
+  PER_PAGE = 10
 
   def index
     @items = Item.all.includes(:user)

@@ -1,7 +1,7 @@
 <header>
   <div class="header">
     <div class="left-menu">
-      <%= link_to image_tag("/images/up-clo_logo_ns.jpg", id: "public", class:"logo"), root_path %>
+      <%= image_tag("/images/up-clo_logo_ns.jpg", id: "public", class:"logo") %>
     </div>
     <div class="right-menu">
       <ul>
@@ -15,13 +15,16 @@
         </li>
         <li><a href="#"class="header-menu"><i class="fas fa-search">Seach</i></a>
           <ul>
-            <li><a href="#" class="menu-list">Category</a></li><br>
-            <li><a href="#" class="menu-list">Color</a></li><br>
-            <li><a href="#" class="menu-list">Pattern</a></li><br>
+            <li><%= link_to items_path do %>
+              <div class="menu-list">Items</div>
+            <% end %></li><br>
+            <li><a href="#" class="menu-list">Stylings</a></li><br>
           </ul>
         </li>
         <% if user_signed_in? %>
-          <li><a href="/" class="header-menu"><i class="fas fa-tshirt"><%=current_user.nickname%>'s closet</i></a></li> 
+          <li><%= link_to user_path(current_user.id) do %>
+            <i class="fas fa-tshirt"><%=current_user.nickname%>'s closet</i>
+          <% end %></li> 
           <li><%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fas fa-sign-out-alt header-menu">Sign out</i>
           <% end %></li>
