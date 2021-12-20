@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
-  PER_PAGE = 5
   def index
     @users = User.all
-    @items = Item.page(params[:page]).order('created_at DESC').per(PER_PAGE)
+    @items = Item.page(params[:page]).order('created_at DESC').per(5)
   end
 
   def show
     @user = User.find(params[:id])
-    @items = Item.page(params[:page]).order('created_at DESC').per(PER_PAGE)
+    @items = Item.page(params[:page]).order('created_at DESC').per(5)
   end
 end

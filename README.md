@@ -40,13 +40,11 @@ https://up-clo.herokuapp.com/
 
 # 実装予定の機能
 * 検索機能（フリーワード・条件）
-* タグ付け機能
-* スタイリング投稿機能
 
 
 # データベース設計　
-ER図等を添付。
-[![Image from Gyazo](https://i.gyazo.com/a334972afe140590a3a495aeb9e01ed9.png)](https://gyazo.com/a334972afe140590a3a495aeb9e01ed9)
+[![Image from Gyazo](https://i.gyazo.com/5cd319517baa996f10cc36492d8d8310.png)](https://gyazo.com/5cd319517baa996f10cc36492d8d8310)
+
 
 ## users table
 
@@ -81,28 +79,3 @@ ER図等を添付。
 
 - belongs_to :user
 - has_many_attached :images
-- has_many :item_tag_relations
-- has_many :tags,through :item_tag_relations
-
-## item_tag_relations table
-
-| Column      | Type       | Options                        |
-|-------------|------------|--------------------------------|
-| item        | references | null: false, foreign_key: true |
-| tag         | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :tweet
-- belongs_to :tag
-
-## tags table
-
-| Column           | Type       | Options                        |
-|------------------|------------|--------------------------------|
-| tag_name         | references | null: false, uniqueness: true  |
-
-### Association
-
-- has_many :item_tag_relations
-- has_many :items,through :item_tag_relations

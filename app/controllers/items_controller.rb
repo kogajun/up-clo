@@ -3,11 +3,9 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: [:index]
   before_action :set_item, only: [:indix, :edit, :show]
 
-  PER_PAGE = 10
-
   def index
     @items = Item.all.includes(:user)
-    @items = Item.page(params[:page]).order('created_at DESC').per(PER_PAGE)
+    @items = Item.page(params[:page]).order('created_at DESC').per(10)
   end
 
   def new
