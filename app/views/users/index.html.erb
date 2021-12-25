@@ -4,15 +4,9 @@
  <div class="top">
     <div class="top-contents">
       <div class="top-content">
-        <% if user_signed_in? %>
-          <p>検索箇所</p>
-        <% else %>
-          <p>あなたのクローゼット<br>アプリへようこそ！！</p>
-          <br>
-          <i class="fas fa-user-plus"><%= link_to "Sign Up", new_user_registration_path %></i>
-          <br>
-          <i class="fas fa-sign-in-alt"><%= link_to "Sign In", user_session_path %></i>
-        <% end %>
+        <p>あなたのクローゼット<br>アプリへようこそ！！</p><br>
+        <i class="fas fa-user-plus"><%= link_to "Sign Up", new_user_registration_path %></i><br>
+        <i class="fas fa-sign-in-alt"><%= link_to "Sign In", user_session_path %></i>
       </div>
     </div>
   </div>
