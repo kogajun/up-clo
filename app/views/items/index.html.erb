@@ -42,15 +42,6 @@
           </div>
         <% end %>
       </div>
-    <% else %>
-      <div class="contents">
-        <% 5.times do %>
-        <div class="content">
-          <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
-          <div>sample item</div>
-        </div>
-        <% end %>
-      </div>
     <% end %>
     <% if user_signed_in? %>
       <%if current_user.items.present? %>
@@ -61,34 +52,25 @@
     <% end %>
     <h1 class="page-heading">STYLINGS</h1>
     <% if user_signed_in? %>
-      <%# スタイリング投稿機能実装追記 %>
-        <%# <% if @items.present? %>
-          <%#<% @items.each do |item| %>
-            <%#<div class='list'>
-              <%#<%= link_to item_path(item.id), method: :get  do %>
-                <%#<div class='item-img-content'>
-                  <%= image_tag item.image, class: "item-img" %>
-                <%#</div>
-              <% end %>
-            <%#</div>
-          <%#<% end %>
-        <%#<% else %> 
-          <div class="contents">
-            <div class="content">
-              <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
-              <p>Let's post !!</p>
-            </div>
-          </div>
+    <%# スタイリング投稿機能実装追記 %>
+      <%# <% if @items.present? %>
+        <%#<% @items.each do |item| %>
+          <%#<div class='list'>
+            <%#<%= link_to item_path(item.id), method: :get  do %>
+              <%#<div class='item-img-content'>
+                <%= image_tag item.image, class: "item-img" %>
+              <%#</div>
+            <% end %>
+          <%#</div>
         <%#<% end %>
-    <% else %>
-      <div class="contents">
-        <% 5.times do %>
-        <div class="content">
-          <div><%= image_tag '/images/image.jpg', class:"sample-img" %></div><br>
-          <div>sample styling</div>
+      <%#<% else %> 
+        <div class="contents">
+          <div class="content">
+            <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
+            <p>Let's post !!</p>
+          </div>
         </div>
-        <% end %>
-      </div>
+      <%#<% end %>
     <% end %>
   </div>
 </body>
