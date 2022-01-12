@@ -20,7 +20,7 @@
 
 <body>
   <div class="main">
-    <h1 class="page-heading">ITEMS</h1>
+    <h1 class="page-heading">ALL ITEMS</h1>
     <% if user_signed_in? %>
       <div class="contents">
         <% if current_user.items.present? %>
@@ -49,28 +49,6 @@
         <br><div class="page">ページ:<%= @items.current_page %> / <%= @items.total_pages %><br>
         <%= @items.total_count %>件中<%= @items.offset_value + 1 %>〜<%= @items.offset_value + @items.length %>件を表示しています。</div><br>
       <% end %>
-    <% end %>
-    <h1 class="page-heading">STYLINGS</h1>
-    <% if user_signed_in? %>
-    <%# スタイリング投稿機能実装追記 %>
-      <%# <% if @items.present? %>
-        <%#<% @items.each do |item| %>
-          <%#<div class='list'>
-            <%#<%= link_to item_path(item.id), method: :get  do %>
-              <%#<div class='item-img-content'>
-                <%= image_tag item.image, class: "item-img" %>
-              <%#</div>
-            <% end %>
-          <%#</div>
-        <%#<% end %>
-      <%#<% else %> 
-        <div class="contents">
-          <div class="content">
-            <%= image_tag "/images/image.jpg", class:"sample-img" %><br>
-            <p>Let's post !!</p>
-          </div>
-        </div>
-      <%#<% end %>
     <% end %>
   </div>
 </body>
